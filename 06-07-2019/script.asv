@@ -1,0 +1,46 @@
+clc;
+clear all;
+close all;
+
+X = imread('lena_color_512.tif');
+
+figure;
+
+% Original Image
+subplot(3, 2, 1);
+imshow(X);
+title('Original Image');
+
+% Gray image
+subplot(3, 2, 2);
+gray_image = rgb2gray(X);
+imshow(gray_image);
+title('Gray Image');
+
+% Red image
+subplot(3, 2, 3);
+red_image = X(:,:,1);
+imshow(red_image);
+title('Red Image');
+
+% Green image
+subplot(3, 2, 4);
+green_image = X(:,:,2);
+imshow(green_image);
+title('Green Image');
+
+% Blue image
+subplot(3, 2, 5);
+blue_image = X(:,:,3);
+imshow(blue_image);
+title('Blue Image');
+
+subplot(3, 2, 5);
+new_gray = 0.3*X(:,:,1) + 0.59*X(:,:,2) + 0.11*X(:,:,3);
+imshow(new_gray);
+title('Grayscale');
+
+for i = 1:512
+    
+end
+    
